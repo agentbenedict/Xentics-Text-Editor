@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Xentics Text Editor</title>
+    <link rel="stylesheet" href="/main/layout/styles/style.css">
+</head>
+
+<body>
+    <section class='layout-nav-bar'>
+        <nav>
+            <img src="/main/img/logo.jpg" alt="DXTE">
+            <ul>
+                <li>
+                    File
+                    <!-- <div class="sub-files">
+                        <ul>
+                            <li>New File</li>
+                            <li>New Folder</li>
+                            <li>New File</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                Open File
+                            </li>
+                            <li>
+                                Open Folder
+                            </li>
+                            <li>
+                                Save
+                            </li>
+                            <li>
+                                Save as
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                Close Editor
+                            </li>
+                            <li>
+                                Close Window
+                            </li>
+                        </ul>
+                    </div> -->
+                </li>
+                <li>
+                    Edit
+                </li>
+                <li>
+                    Selection
+                </li>
+                <li>
+                    View
+                </li>
+                <li>
+                    Go
+                </li>
+                <li>
+                    Run
+                </li>
+                <li>
+                    Terminal
+                </li>
+                <li>
+                    Help
+                </li>
+            </ul>
+        </nav>
+        <div class="searchbox">
+            <input type="text" placeholder='SEARCH' title='Search (Ctrl+Shift+F)'>
+        </div>
+    </section>
+    <section class='layout-file-container'>
+        <div class="layout-sidebar">
+            <ul>
+                <li id='Explorer'>
+                    <img src="/main/img/FileExplorer.jpg" alt="Explorer" title='Explorer' id='fileImg'>
+                </li>
+                <li>
+                    <img src="/main/img/Search.jpg" alt="Search" title='Search' id='searchImg'>
+                </li>
+                <li>
+                    <img src="/main/img/Source.jpg" alt="Source Control" title='Source Control' id='sourceImg'>
+                </li>
+                <li>
+                    <img src="/main/img/RunandDebug.jpg" alt="Run and Debugging" title='Run and Debugging' id='runImg'>
+                </li>
+                <li>
+                    <img src="/main/img/Extensions.jpg" alt=" Extensions" title='Extensions' id='extenImg'>
+                </li>
+            </ul>
+            <ul class='lower-sidebar'>
+                <li>
+                    <img src="/main/img/Account.jpg" alt="Account" title='Accounts'>
+                </li>
+                <li>
+                    <img src="/main/img/Settings.jpg" alt="Settings" title='Settings'>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-files" id='sidebar'>
+            <div id='explorer'>
+                <ul>
+                    <li>
+                        EXPLORER
+                    </li>
+                </ul>
+                <div>
+                    <ul class="files">
+                        <li>
+                            <img src="/main/img/NewFile.jpg" alt="New File" title='New File...'>
+                        </li>
+                        <li>
+                            <img src="/main/img/NewFolder.jpg" alt="New Folder" title='New Folder...'>
+                        </li>
+                        <li>
+                            <img src="/main/img/Refresh.jpg" alt="Refresh" title='Refresh Explorer...'>
+                        </li>
+                        <li>
+                            <img src="/main/img/Collapse.jpg" alt="Collapse"
+                                title='Collapse Folder in File Explorer...'>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="search">
+                <ul id='search'>
+                    <li>
+                        SEARCH
+                    </li>
+                </ul>
+                <input type="text" name='search' placeholder='SEARCH' id='search'>
+            </div>
+            <div id="source">
+                <ul>
+                    <li>
+                        SOURCE CONTROL
+                    </li>
+                    <div class="sourceText">
+                        <p>
+                            Install Visual Studio Code, a popular code editor, to help in writing, debugging and running
+                            advanced languages. Learn more in our <a href='guides'>Guides</a>
+                        </p>
+                        <button>Download Visual Studio Code for PC</button>
+                    </div>
+                </ul>
+            </div>
+            <div id="run">
+                <ul>
+                    <li>
+                        RUN AND DEBUG
+                    </li>
+                </ul>
+                <div class="runText">
+                    <button>Run and Debug</button>
+
+                    <p> To customize Run and Debug <a href='run'>create a launch.json</a> <br> <br>
+                        <a href="show">
+                            Show all automatic debug configurations.
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div id="extension">
+                <ul>
+                    <li>
+                        EXTENSIONS
+                    </li>
+                </ul>
+                <div class="extenText">
+                    <input type="text" placeholder='Search Extension in Ma...'>
+                    <br><br>
+                    <label for="installed">INSTALLED</label><br><br>
+                    <label for="roaming" id='roaming'>.&nbsp;&nbsp;.&nbsp;&nbsp;.</label>
+                </div>
+            </div>
+        </div>
+        <div class="file-display">
+            <div class="active-file">
+                <span id='file'>Topic</span>
+            </div>
+            <div class="file-display-editor">
+                <div class="line-text">
+                    <textarea name="text" id="textArea" cols="152" rows="22"
+                        placeholder='Database Xentics Text-Editor...'></textarea>
+                    <button type="submit" id='saveFile'>Save</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="spacer">
+    </div>
+</body>
+<script src='/main/layout/script/index.js'></script>
+
+</html>
